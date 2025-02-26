@@ -1,0 +1,1131 @@
+/* Enable smooth scrolling for the entire HTML document */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Define CSS variables for default (light mode) colors and styles */
+:root {
+    /* Default Colors */
+    --background-color: #ffffff; /* Background color for light mode */
+    --text-color: #333333; /* Text color for light mode */
+    --header-bg: #f9fafb; /* Header background color for light mode */
+    --header-hover-bg: #f8f9fa; /* Header hover background color for light mode */
+    --primary-color: #007BFF; /* Primary color (e.g., buttons, links) */
+    --secondary-color: #f4f4f4; /* Secondary color (e.g., backgrounds) */
+    --accent-color: #3c6188; /* Accent color (e.g., highlights) */
+    --hover-color: #0056b3; /* Hover color for interactive elements */
+    --active-color: #01152c; /* Active color for interactive elements */
+    --border-color: #ddd; /* Border color */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow color */
+    --gradient-start: #6a11cb; /* Start color for gradients */
+    --gradient-end: #2575fc; /* End color for gradients */
+    --home-background-image: url('light-background-img.png'); /* Light mode background image */
+}
+
+/* Override CSS variables for dark mode */
+[data-theme="dark"] {
+    /* Dark Mode Colors */
+    --background-color: #121212; /* Background color for dark mode */
+    --text-color: #ffffff; /* Text color for dark mode */
+    --header-bg: #1e1e1e; /* Header background color for dark mode */
+    --header-hover-bg: #2c2c2c; /* Header hover background color for dark mode */
+    --primary-color: #90caf9; /* Primary color for dark mode */
+    --secondary-color: #1e1e1e; /* Secondary color for dark mode */
+    --accent-color: #64b5f6; /* Accent color for dark mode */
+    --hover-color: #42a5f5; /* Hover color for dark mode */
+    --active-color: #64b5f6; /* Active color for dark mode */
+    --border-color: #333; /* Border color for dark mode */
+    --shadow-color: rgba(0, 0, 0, 0.4); /* Shadow color for dark mode */
+    --gradient-start: #1e1e1e; /* Gradient start color for dark mode */
+    --gradient-end: #121212; /* Gradient end color for dark mode */
+    --home-background-image: url('dark-background-img.png'); /* Dark mode background image */
+}
+
+/* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color); /* Set background color */
+    color: var(--text-color); /* Set text color */
+    font-family: 'Arial', sans-serif; /* Default font */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+/* Header styling */
+.new-header {
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to the top of the page */
+    z-index: 1000; /* Ensure header is above other content */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for light mode */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    color: var(--text-color); /* Text color */
+    box-shadow: 0 4px 12px var(--shadow-color); /* Add shadow */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Dark mode header styling */
+[data-theme="dark"] .new-header {
+    background-color: rgba(30, 30, 30, 0.8); /* Semi-transparent dark background for dark mode */
+}
+
+/* Header hover effect */
+.new-header:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque on hover for light mode */
+}
+
+/* Dark mode header hover effect */
+[data-theme="dark"] .new-header:hover {
+    background-color: rgba(30, 30, 30, 0.9); /* Slightly more opaque on hover for dark mode */
+}
+
+/* Header content layout */
+.new-header header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and nav links */
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center content */
+    padding: 1rem 2rem; /* Padding for header content */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Logo styling */
+.new-header .logo {
+    font-size: 2.2rem; /* Logo font size */
+    font-weight: 800; /* Bold font weight */
+    color: var(--primary-color); /* Logo color */
+    text-transform: uppercase; /* Uppercase text */
+    text-shadow: 1px 1px 5px var(--shadow-color); /* Text shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    margin-right: auto; /* Push logo to the left */
+}
+
+/* Logo hover effect */
+.new-header .logo:hover {
+    color: var(--hover-color); /* Change color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+    text-shadow: 2px 2px 8px var(--shadow-color); /* Increase shadow on hover */
+}
+
+/* Navigation styling */
+.new-header nav {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure nav takes full width */
+}
+
+/* Navigation links container */
+.new-header nav > div {
+    margin-left: auto; /* Push navigation links to the right */
+}
+
+/* Navigation links list */
+.new-header .nav-links {
+    list-style: none; /* Remove default list styling */
+    display: flex;
+    gap: 2rem; /* Gap between links */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation link items */
+.new-header .nav-links li {
+    position: relative;
+}
+
+/* Navigation link styling */
+.new-header .nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: var(--text-color); /* Link color */
+    font-size: 1rem; /* Font size */
+    font-weight: 500; /* Medium font weight */
+    padding: 0.6rem 1.2rem; /* Padding for links */
+    border-radius: 8px; /* Rounded corners */
+    background-color: transparent; /* Transparent background */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect for navigation links */
+.new-header .nav-links a:hover {
+    color: var(--primary-color); /* Change color on hover */
+    transform: translateY(-3px); /* Slight upward movement */
+}
+
+/* Active link styling */
+.new-header .nav-links a.active {
+    color: var(--primary-color); /* Active link color */
+    font-weight: 600; /* Bold font weight */
+    border-bottom: 2px solid var(--primary-color); /* Underline for active link */
+}
+
+/* Theme toggle button styling */
+#theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    outline: none;
+}
+
+#theme-toggle i {
+    font-size: 1.2rem;
+}
+
+[data-theme="light"] #theme-toggle .fa-moon {
+    display: none;
+}
+
+[data-theme="dark"] #theme-toggle .fa-sun {
+    display: none;
+}
+
+[data-theme="dark"] #theme-toggle .fa-moon {
+    display: inline-block;
+}
+
+[data-theme="light"] #theme-toggle .fa-sun {
+    display: inline-block;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    /* Stack header content vertically on smaller screens */
+    .new-header header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    /* Stack navigation items vertically */
+    .new-header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    /* Stack navigation links vertically */
+    .new-header .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    /* Full-width navigation links on mobile */
+    .new-header .nav-links a {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        text-align: left;
+    }
+}
+
+/* Home section styling */
+#home {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)), url('background-img.png'); /* Gradient and background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    color: var(--text-color); /* Text color */
+    scroll-snap-align: start; /* Snap to the start of the section */
+    scroll-snap-stop: always; /* Always stop at this section */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background image overlay for home section */
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background-img.png') no-repeat center center/cover; /* Background image */
+    opacity: 0.2; /* Semi-transparent overlay */
+    z-index: -1; /* Place behind content */
+    transform: translateZ(-1px) scale(2); /* Parallax effect */
+    transition: filter 0.3s ease; /* Smooth transition for filter */
+}
+
+/* Dark mode styling for home section background */
+[data-theme="dark"] #home::before {
+    filter: brightness(0.6) contrast(1.2) grayscale(0.5); /* Darken the image */
+}
+
+/* Container for home section content */
+#home .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px; /* Max width for content */
+    margin: -90px auto 0; /* Move container upward by 50px */
+    padding: 0 20px; /* Padding for content */
+}
+
+/* Content within the home section */
+#home .content {
+    flex: 1; /* Take up remaining space */
+}
+
+/* Main heading in home section */
+#home h1 {
+    font-weight: 700; /* Bold font weight */
+    font-size: 3rem; /* Large font size */
+    margin-bottom: 10px; /* Bottom margin */
+    color: var(--text-color); /* Text color */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+/* Paragraph in home section */
+#home p {
+    font-weight: 700; /* Bold font weight */
+    margin: 10px 0; /* Margin for paragraphs */
+    line-height: 1.9; /* Line height for readability */
+    color: var(--text-color); /* Text color */
+    animation: fadeIn 2.5s ease-in-out; /* Fade-in animation */
+}
+
+
+
+/* Image container in home section */
+#home .image {
+    max-width: 100%; /* Max width for image */
+    text-align: center; /* Center the image */
+    position: relative;
+}
+
+/* Image within the home section */
+#home .image img {
+    width: 100%; /* Full width */
+    height: auto; /* Auto height */
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+}
+
+
+/* Typing and clearing animation for the h2 */
+#home h2 {
+    position: relative;
+    font-size: 2.5rem; /* Font size */
+    font-weight: 1500; /* Bold font weight */
+    color: #00bbff; /* Text color */
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent text wrapping */
+    border-right: 2px solid #444; /* Cursor effect */
+    width: 0; /* Initially hidden */
+    animation: typing 5s steps(30, end) forwards, clearing 2s steps(30, end) 5s forwards; /* Typing and clearing animation */
+}
+
+/* Typing animation */
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+/* Clearing animation */
+@keyframes clearing {
+    0% { width: 100%; }
+    100% { width: 0; }
+}
+
+/* Cursor blinking animation */
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: #444; }
+}
+
+
+/* Button styling in home section */
+#home .button {
+    display: inline-block;
+    margin-top: 20px; /* Top margin */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold font weight */
+    color: var(--text-color); /* Text color */
+    background-color: var(--primary-color); /* Background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ripple effect for button */
+#home .button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent); /* Radial gradient */
+    transform: translate(-50%, -50%) scale(0); /* Start with no scale */
+    transition: transform 0.5s ease; /* Smooth transition */
+    border-radius: 50%; /* Circular shape */
+}
+
+/* Expand ripple effect on hover */
+#home .button:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Scale up to full size */
+}
+
+/* Hover effect for button */
+#home .button:hover {
+    background-color: var(--hover-color); /* Change background color on hover */
+    box-shadow: 0 0 15px var(--primary-color); /* Add glow effect */
+}
+
+/* About section styling */
+#about {
+    padding: 100px 20px; /* Increased padding */
+    color: var(--text-color); /* Default text color */
+}
+
+/* Container for about section content */
+#about .container {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center content */
+}
+
+/* Heading in about section */
+#about h2 {
+    text-align: center; /* Center the heading */
+    font-size: 2.8rem; /* Larger font size */
+    font-weight: 700; /* Bold font weight */
+    color: var(--text-color); /* Text color */
+    margin-bottom: 40px; /* Increased bottom margin */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+/* Subheading in about section */
+#about h3 {
+    font-size: 2rem; /* Larger font size */
+    font-weight: 600; /* Semi-bold font weight */
+    margin-top: 30px; /* Top margin */
+    color: var(--primary-color); /* Text color */
+    animation: fadeIn 2.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Paragraph in about section */
+#about p {
+    font-size: 1.1rem; /* Font size */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 20px; /* Bottom margin */
+    color: var(--text-color); /* Text color */
+    animation: fadeIn 3s ease-in-out; /* Fade-in animation */
+}
+
+/* List styling */
+#about ul {
+    list-style-type: disc; /* Bullet points */
+    margin-left: 20px; /* Indent list */
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+#about ul li {
+    font-size: 1.1rem; /* Font size */
+    line-height: 1.6; /* Line height */
+    margin-bottom: 10px; /* Bottom margin */
+    color: var(--text-color); /* Text color */
+}
+
+/* About content layout */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    gap: 40px; /* Gap between columns */
+}
+
+/* Tools section styling */
+.tools {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to next line if needed */
+    gap: 20px; /* Gap between items */
+    justify-content: center; /* Center items */
+    padding: 20px; /* Padding for section */
+}
+
+/* Individual tool styling */
+.tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color); /* Background color */
+    padding: 20px; /* Padding for tool */
+    border-radius: 10px; /* Rounded corners */
+    width: 120px; /* Fixed width */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 8px var(--shadow-color); /* Add shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    opacity: 0; /* Start with transparent */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeInUp 0.5s ease forwards; /* Fade-in animation */
+}
+
+/* Delay animations for each tool */
+.tool:nth-child(1) { animation-delay: 0.1s; }
+.tool:nth-child(2) { animation-delay: 0.2s; }
+.tool:nth-child(3) { animation-delay: 0.3s; }
+.tool:nth-child(4) { animation-delay: 0.4s; }
+.tool:nth-child(5) { animation-delay: 0.5s; }
+
+/* Fade-in animation for tools */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to normal position */
+    }
+}
+
+/* Hover effect for tools */
+.tool:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 6px 15px var(--shadow-color); /* Increase shadow on hover */
+}
+
+/* Image within tool */
+.tool img {
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    margin-bottom: 10px; /* Bottom margin */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Text within tool */
+.tool span {
+    font-size: 14px; /* Font size */
+    font-weight: 600; /* Bold font weight */
+    color: var(--text-color); /* Text color */
+}
+
+/* Hover effect for tool text */
+.tool:hover span {
+    color: var(--primary-color); /* Change color on hover */
+}
+
+/* Button styling */
+#about .button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary-color); /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    font-weight: 500; /* Medium font weight */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+#about .button:hover {
+    background: #0056b3; /* Darker background on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+}
+/* Services section styling */
+#services {
+    padding: 80px 20px; /* Increased padding for better spacing */
+    background-color: var(--secondary-color); /* Background color */
+    color: var(--text-color); /* Default text color for the section */
+}
+
+/* Container for services section content */
+#services .container {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center content */
+    text-align: center; /* Center text */
+}
+
+/* Heading in services section */
+#services h2 {
+    font-size: 2.8rem; /* Slightly larger font size */
+    font-weight: 700; /* Bold font weight */
+    color: var(--text-color); /* Text color */
+    margin-bottom: 15px; /* Bottom margin */
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Subheading in services section */
+#services h3 {
+    font-size: 2rem; /* Font size */
+    font-weight: 600; /* Semi-bold font weight */
+    color: var(--primary-color); /* Text color */
+    margin-bottom: 40px; /* Bottom margin */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+    text-align: left; /* Align text to the left */
+
+}
+
+/* List of services */
+#services .service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 30px; /* Increased gap for better spacing */
+    justify-content: center; /* Center items */
+}
+
+/* Individual service styling */
+#services .service {
+    background: var(--background-color); /* Background color */
+    border: 1px solid var(--border-color); /* Border */
+    border-radius: 12px; /* Slightly more rounded corners */
+    padding: 30px; /* Increased padding for better spacing */
+    box-shadow: 0 4px 12px var(--shadow-color); /* Softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    text-align: left; /* Align text to the left */
+}
+
+/* Hover effect for services */
+#services .service:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 8px 16px var(--shadow-color); /* Stronger shadow on hover */
+}
+
+/* Icon within service */
+#services .service-icon {
+    font-size: 2.5rem; /* Larger icon size */
+    color: var(--primary-color); /* Icon color */
+    margin-bottom: 20px; /* Bottom margin */
+    display: block; /* Ensure icons are block-level for proper spacing */
+}
+
+/* Heading within service */
+#services .service h3 {
+    font-size: 1.6rem; /* Font size */
+    font-weight: 600; /* Semi-bold font weight */
+    color: var(--text-color); /* Text color */
+    margin-bottom: 15px; /* Bottom margin */
+}
+
+/* Paragraph within service */
+#services .service p {
+    font-size: 1rem; /* Font size */
+    color: var(--text-color); /* Text color */
+    line-height: 1.8; /* Increased line height for better readability */
+    opacity: 0.9; /* Slightly transparent text for a modern look */
+}
+
+/* Responsive design for services */
+@media (max-width: 768px) {
+    #services h2 {
+        font-size: 2.2rem; /* Smaller font size for smaller screens */
+    }
+
+    #services h3 {
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+    }
+
+    #services .service-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #services {
+        padding: 60px 15px; /* Reduced padding for very small screens */
+    }
+
+    #services h2 {
+        font-size: 2rem; /* Smaller font size for very small screens */
+    }
+
+    #services h3 {
+        font-size: 1.4rem; /* Smaller font size for very small screens */
+    }
+
+    #services .service {
+        padding: 20px; /* Reduced padding for very small screens */
+    }
+}
+
+
+/* Projects section styling */
+#projects {
+    padding: 80px 20px; /* Increased padding for better spacing */
+    color: var(--text-color); /* Default text color */
+}
+
+/* Container for projects section content */
+#projects .container {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center content */
+    text-align: center; /* Center text */
+}
+
+/* Heading in projects section */
+#projects h2 {
+    font-size: 2.8rem; /* Larger font size */
+    font-weight: 700; /* Bold font weight */
+    color: var(--text-color); /* Text color */
+    margin-bottom: 20px; /* Increased bottom margin */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+/* Subheading in projects section */
+#projects h3 {
+    text-align: left; /* Align text to the left */
+    font-size: 2rem; /* Larger font size */
+    font-weight: 600; /* Semi-bold font weight */
+    margin-top: 40px; /* Top margin */
+    color: var(--primary-color); /* Text color */
+    animation: fadeIn 2.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Filter buttons styling */
+#projects .project-filters {
+    margin-bottom: 30px; /* Increased bottom margin */
+}
+
+#projects .project-filters button {
+    background: var(--background-color); /* Background color */
+    border: 2px solid var(--primary-color); /* Border color */
+    padding: 10px 20px; /* Padding for buttons */
+    margin: 5px; /* Margin between buttons */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    font-weight: 500; /* Medium font weight */
+    color: var(--text-color); /* Text color */
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+#projects .project-filters button.active,
+#projects .project-filters button:hover {
+    background: var(--primary-color); /* Active/hover background color */
+    color: #fff; /* Active/hover text color */
+    border-color: var(--primary-color); /* Active/hover border color */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* List of projects */
+#projects .projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 30px; /* Increased gap between items */
+}
+
+/* Individual project styling */
+#projects .project {
+    background-color: var(--background-color); /* Background color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    padding: 25px; /* Increased padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+/* Hover effect for projects */
+#projects .project:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+/* Heading within project */
+#projects .project h3 {
+    text-align: center; /* Center the heading */
+    font-size: 1.6rem; /* Larger font size */
+    font-weight: 600; /* Semi-bold font weight */
+    color: var(--text-color); /* Text color */
+    margin-bottom: 15px; /* Increased bottom margin */
+}
+
+/* Paragraph within project */
+#projects .project p {
+    font-size: 1.1rem; /* Slightly larger font size */
+    color: var(--text-color); /* Text color */
+    margin-bottom: 20px; /* Bottom margin */
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+/* Button within project */
+#projects .project .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary-color); /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    font-weight: 500; /* Medium font weight */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+#projects .project .button:hover {
+    background: #0056b3; /* Darker background on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Responsive design for projects */
+@media (max-width: 768px) {
+    /* Adjust font sizes for smaller screens */
+    #projects h2 {
+        font-size: 2.2rem;
+    }
+
+    #projects h3 {
+        font-size: 1.8rem;
+    }
+
+    #projects .project h3 {
+        font-size: 1.4rem;
+    }
+
+    #projects .project p {
+        font-size: 1rem;
+    }
+
+    #projects .project-filters button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Contact section styling */
+#contact {
+    padding: 80px 20px; /* Increased padding */
+    background-color: var(--background-color); /* Background color */
+    color: var(--text-color); /* Default text color */
+}
+
+/* Container for contact section content */
+#contact .container {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center content */
+}
+
+/* Heading in contact section */
+#contact h2 {
+    text-align: center; /* Center the heading */
+    font-size: 2.8rem; /* Larger font size */
+    font-weight: 700; /* Bold font weight */
+    color: var(--text-color); /* Text color */
+    margin-bottom: 20px; /* Bottom margin */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+/* Contact introduction paragraph */
+#contact .contact-intro {
+    text-align: center; /* Center the text */
+    font-size: 1.2rem; /* Font size */
+    color: var(--text-color); /* Text color */
+    margin-bottom: 40px; /* Bottom margin */
+    animation: fadeIn 2.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Wrapper for contact form and details */
+#contact .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 500px; /* Reduced gap for better spacing */
+    flex-wrap: wrap; /* Wrap items to next line if needed */
+}
+
+/* Contact form styling */
+#contact .contact-form {
+    flex: 1; /* Take up remaining space */
+    min-width: 300px; /* Minimum width */
+}
+
+/* Heading within contact form */
+#contact .contact-form h3 {
+    font-size: 2rem; /* Larger font size */
+    font-weight: 600; /* Semi-bold font weight */
+    color: var(--primary-color); /* Text color */
+    margin-bottom: 15px; /* Bottom margin */
+    animation: fadeIn 2.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Paragraph within contact form */
+#contact .contact-form p {
+    font-size: 1.1rem; /* Font size */
+    color: var(--text-color); /* Text color */
+    margin-bottom: 20px; /* Bottom margin */
+    animation: fadeIn 3s ease-in-out; /* Fade-in animation */
+}
+
+/* Input fields and textarea in contact form */
+#contact .contact-form input,
+#contact .contact-form textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Padding for inputs */
+    font-size: 1rem; /* Font size */
+    border: 1px solid var(--border-color); /* Border */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px; /* Bottom margin */
+    background-color: var(--secondary-color); /* Background color */
+    color: var(--text-color); /* Text color */
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus {
+    border-color: var(--primary-color); /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button in contact form */
+#contact .contact-form button {
+    padding: 12px 25px; /* Padding for button */
+    background-color: var(--primary-color); /* Background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+#contact .contact-form button:hover {
+    background-color: var(--hover-color); /* Change background color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Contact details section */
+#contact .contact-details {
+    flex: 1; /* Take up remaining space */
+    min-width: 300px; /* Minimum width */
+}
+
+/* Heading within contact details */
+#contact .contact-details h3 {
+    font-size: 2rem; /* Larger font size */
+    font-weight: 600; /* Semi-bold font weight */
+    color: var(--primary-color); /* Text color */
+    margin-bottom: 15px; /* Bottom margin */
+    animation: fadeIn 2.5s ease-in-out; /* Fade-in animation */
+}
+
+/* List within contact details */
+#contact .contact-details ul {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 0; /* Remove padding */
+}
+
+/* List items within contact details */
+#contact .contact-details li {
+    font-size: 1.1rem; /* Font size */
+    color: var(--text-color); /* Text color */
+    margin-bottom: 10px; /* Bottom margin */
+}
+
+/* Links within contact details */
+#contact .contact-details a {
+    color: var(--primary-color); /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Medium font weight */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+#contact .contact-details a:hover {
+    color: var(--hover-color); /* Change color on hover */
+}
+
+/* Social media links */
+#contact .social-links {
+    display: flex;
+    gap: 15px; /* Gap between icons */
+    margin-top: 20px; /* Top margin */
+}
+
+#contact .social-links .social-icon {
+    font-size: 1.5rem; /* Icon size */
+    color: var(--primary-color); /* Icon color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+#contact .social-links .social-icon:hover {
+    color: var(--hover-color); /* Change color on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #contact .contact-wrapper {
+        flex-direction: column; /* Stack form and details vertically */
+        gap: 30px; /* Reduced gap */
+    }
+
+    #contact h2 {
+        font-size: 2.2rem; /* Smaller font size */
+    }
+
+    #contact .contact-intro {
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    #contact .contact-form h3,
+    #contact .contact-details h3 {
+        font-size: 1.8rem; /* Smaller font size */
+    }
+}
+
+/* Footer section styling */
+footer {
+    background-color: var(--background-color); /* Background color */
+    color: var(--text-color); /* Text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding for footer */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient background for footer */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); /* Gradient background */
+    opacity: 0.1; /* Semi-transparent */
+    z-index: -1; /* Place behind content */
+    animation: footerGradient 5s ease infinite; /* Animated gradient */
+}
+
+/* Keyframes for footer gradient animation */
+@keyframes footerGradient {
+    0% { transform: translateX(-100%); } /* Start from left */
+    50% { transform: translateX(100%); } /* Move to right */
+    100% { transform: translateX(-100%); } /* Return to left */
+}
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--hover-color);
+}
+
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 1.3s ease;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.loading-spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-spinner::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--primary-color);
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.progress-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background-color: var(--primary-color);
+    z-index: 1000;
+    width: 0%;
+    transition: width 0.2s ease;
+}
+
+
+
+/* Filter Buttons */
+.project-filters button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Hover Effect for Buttons */
+.project-filters button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Active Button Styling */
+.project-filters button.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-filters button {
+        width: 100%;
+        text-align: center;
+    }
+}
