@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,257 +11,567 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+</head>
 <body>
     <div class="new-header">
         <header>
             <nav>
                 <div class="logo">Varad Lakhotiya</div>
-
-                <div>
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li>
-                        <button id="theme-toggle">
-                            <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon" style="display: none;"></i>
-                        </button>
-                    </li>
-                </ul> 
-                </div>
+            <div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#experience" class="nav-link">Professional Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <button id="theme-toggle">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon" style="display: none;"></i>
+                    </button>
+                </li>
+            </ul>
             </nav>
         </header>
     </div>
-    
-    <section id="home" class="section hero" style="background-image: url('background-img.png');">
-        <div class="container">
-            <div class="content">
-                <h1>Hi, I'm Varad Lakhotiya</h1>
-                <h2 id="typing-text">Full-Stack Developer & Problem-Solver</h2> <!-- This element will be animated -->
-                <p>I specialize in crafting modern, responsive web applications. Currently, I am focused on building innovative solutions and enhancing user experiences through cutting-edge technologies.</p>
-                <a href="resume.pdf" class="button" download>Download Resume</a>
-            </div>
-            <div class="image">
-                <img data-src="right.svg" alt="Varad Lakhotiya" />
-            </div>
+<section id="home" class="section hero" style="background-image: url('background-img.png');">
+    <div class="container">
+        <div class="content">
+            <h1>Hi, I'm Varad Lakhotiya</h1>
+            <h2 id="typing-text">B.Tech Student & Full-Stack Developer</h2>
+            <p>Currently pursuing a B.Tech in Computer and Communication Engineering with a minor in Data Science (GPA: 8.73). I build responsive web applications and data-driven solutions using modern technologies.</p>
+            <a href="resume.pdf" class="button" download>Download Resume</a>
         </div>
-    </section>
-    
-    
-    
-    
-    
-    
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <!-- Left Column: Text Content -->
-                <div class="about-text">
+        <div class="image">
+            <img data-src="right.svg" alt="Portrait of Varad Lakhotiya" />
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <!-- Left Column: Journey & Education -->
+            <div class="about-text">
+                <div class="journey-section">
                     <h3>My Journey</h3>
                     <p>
-                        Over the past 2 years, I’ve honed my skills as a self-taught developer, working on a variety of projects ranging from web applications to mobile apps. 
-                        My journey began with a curiosity for coding, and it has since evolved into a passion for building solutions that solve real-world problems.
-                    </p>
-                    <p>
-                        I have a strong foundation in both frontend and backend development, with expertise in building scalable systems and high-performance applications. 
-                        Currently, I’m expanding my knowledge in cloud technologies and DevOps to deliver even more robust solutions.
-                    </p>
-                    <h3>What Drives Me</h3>
-                    <p>
-                        I believe in the power of technology to create meaningful change. Whether it’s designing intuitive user interfaces or optimizing backend systems, 
-                        I strive to deliver solutions that are both functional and impactful.
-                    </p>
-                    <h3>Certifications</h3>
-                    <ul>
-                        <li>Certified Web Developer - [Certification Body]</li>
-                        <li>Advanced JavaScript - [Platform]</li>
-                        <li>Cloud Computing Fundamentals - [Platform]</li>
-                    </ul>
-                    <a href="#contact" class="button">Let's Work Together</a>
-                </div>
-    
-                <!-- Right Column: Tools and Technologies -->
-                <div class="about-tools">
-                    <h3>Technologies and Tools</h3>
-                    <p>
-                        I leverage a combination of cutting-edge technologies and reliable open-source software to build user-focused, high-performance applications. 
-                        Below are some of the tools and technologies I work with:
-                    </p>
-                    <div class="tools">
-                        <div class="tool animate-on-scroll">
-                            <img src="c-logo.png" alt="C Language Logo" />
-                            <span>C Language</span>
-                        </div>
-                        <div class="tool">
-                            <img src="java-logo.png" alt="Java Logo" />
-                            <span>Java</span>
-                        </div>
-                        <div class="tool">
-                            <img src="html-logo.png" alt="HTML Logo" />
-                            <span>HTML</span>
-                        </div>
-                        <div class="tool">
-                            <img src="css-logo.jpeg" alt="CSS Logo" />
-                            <span>CSS</span>
-                        </div>
-                        <div class="tool">
-                            <img src="js-logo.png" alt="JavaScript Logo" />
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="tool">
-                            <img src="mysql-logo.png" alt="MySQL Logo" />
-                            <span>MySQL</span>
-                        </div>
-                        <div class="tool">
-                            <img src="git-logo.png" alt="Git Logo" />
-                            <span>Git</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="services" class="section">
-        <div class="container">
-            <h2>Services</h2>
-            <h3>What I Provide</h3>
-            <div class="service-list">
-                <div class="service">
-                    <i class="fas fa-laptop-code service-icon"></i> <!-- FontAwesome icon -->
-                    <h3>Web Application Development</h3>
-                    <p>
-                        Web design encompasses many different skills and disciplines in the production and maintenance of websites. 
-                        This includes web graphic design, user interface design, authoring (standardized code and proprietary software), 
-                        user experience design, and search engine optimization.
+                        I am a self-driven developer and a B.Tech student at Manipal University, Jaipur, specializing in Computer and Communication Engineering with a minor in Data Science. With a strong academic record and hands-on experience in multiple projects, I blend theory with practice to deliver impactful solutions.
                     </p>
                 </div>
-                <div class="service">
-                    <i class="fas fa-mobile-alt service-icon"></i> <!-- FontAwesome icon -->
-                    <h3>Mobile Application Development</h3>
-                    <p>
-                        I provide a range of mobile application development services, including custom mobile development for Android platforms, 
-                        building cross-platform apps, designing user experiences, and integrating novel mobile interfaces such as chat and voice.
-                    </p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-server service-icon"></i> <!-- FontAwesome icon -->
-                    <h3>Backend Development</h3>
-                    <p>
-                        Backend development focuses on creating the server-side logic, database management, and APIs that power web and mobile applications. 
-                        This involves optimizing the logic of displaying elements in interactive designs to enhance user experience.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="project-filters">
-                <button data-filter="all" class="active">All</button>
-                <button data-filter="web">Web Development</button>
-                <button data-filter="mobile">Mobile Apps</button>
+                <!-- Enhanced Education Section -->
+                <div class="education-section">
+                    <h3>Education Timeline</h3>
+                    <div class="education-timeline">
+                        <!-- Current Education -->
+                        <div class="education-item current">
+                            <div class="education-icon">
+                                <div class="icon-circle">🎓</div>
+                                <div class="timeline-line"></div>
+                            </div>
+                            <div class="education-content">
+                                <div class="education-header">
+                                    <h4>Bachelor of Technology</h4>
+                                    <span class="education-period">Sep 2022 – May 2026</span>
+                                </div>
+                                <div class="education-details">
+                                    <p class="institution">Manipal University, Jaipur</p>
+                                    <p class="specialization">Computer And Communication Engineering</p>
+                                    <p class="minor">Minor Specialization in Data Science</p>
+                                    <div class="grade-location">
+                                        <span class="grade">GPA: <strong>8.73</strong> (Until 6th Sem)</span>
+                                        <span class="location">Jaipur, Rajasthan</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HSC Education -->
+                        <div class="education-item">
+                            <div class="education-icon">
+                                <div class="icon-circle">📚</div>
+                                <div class="timeline-line"></div>
+                            </div>
+                            <div class="education-content">
+                                <div class="education-header">
+                                    <h4>Senior Secondary Examination</h4>
+                                    <span class="education-period">Apr 2020 – May 2022</span>
+                                </div>
+                                <div class="education-details">
+                                    <p class="institution">Mallick Junior College Of Science</p>
+                                    <p class="specialization">HSC - Class XII</p>
+                                    <div class="grade-location">
+                                        <span class="grade">Percentage: <strong>89%</strong></span>
+                                        <span class="location">Aurangabad, Maharashtra</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CBSE Education -->
+                        <div class="education-item">
+                            <div class="education-icon">
+                                <div class="icon-circle">📖</div>
+                            </div>
+                            <div class="education-content">
+                                <div class="education-header">
+                                    <h4>Higher Secondary Examination</h4>
+                                    <span class="education-period">May 2020</span>
+                                </div>
+                                <div class="education-details">
+                                    <p class="institution">Prince English CBSE School</p>
+                                    <p class="specialization">CBSE - Class X</p>
+                                    <div class="grade-location">
+                                        <span class="grade">Percentage: <strong>90.5%</strong></span>
+                                        <span class="location">Selu, Maharashtra</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Awards Section -->
+                <div class="awards-section">
+                    <h3>Awards & Recognition</h3>
+                    <div class="award-item">
+                        <div class="award-icon">🏆</div>
+                        <div class="award-content">
+                            <h4>Dean's List Award 2024</h4>
+                            <p>Recognized for academic excellence in 4th semester</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#contact" class="cta-button">Let's Work Together</a>
             </div>
-            <h3>What I Built</h3>
-            <div class="projects-list">
-                <div class="project" data-category="web">
-                    <h3>Temple Management System</h3>
-                    <p>A web-based platform for managing temple activities, donations, and events. Built using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.</p>
-                    <a href="#" class="button">View Project</a>
-                </div>
-                <div class="project" data-category="mobile">
-                    <h3>Mutual Funds Recommendation Chatbot</h3>
-                    <p>An AI-powered chatbot that recommends mutual funds based on user preferences. Developed using <strong>Flutter</strong> and integrated with <strong>Dialogflow</strong>.</p>
-                    <a href="#" class="button">View Project</a>
-                </div>
-                <div class="project" data-category="web">
-                    <h3>Personal Portfolio Website</h3>
-                    <p>A responsive portfolio website showcasing my skills, projects, and achievements. Built with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.</p>
-                    <a href="#" class="button">View Project</a>
-                </div>
-                <div class="project" data-category="mobile">
-                    <h3>Fitness Tracker App</h3>
-                    <p>A mobile app to track workouts, calories, and progress. Developed using <strong>React Native</strong> and <strong>Firebase</strong>.</p>
-                    <a href="#" class="button">View Project</a>
-                </div>
-                <div class="project" data-category="web">
-                    <h3>E-Commerce Platform</h3>
-                    <p>An online store with user authentication, product search, and payment integration. Built with <strong>Django</strong> and <strong>PostgreSQL</strong>.</p>
-                    <a href="#" class="button">View Project</a>
-                </div>
-            </div>
-        </div>
-    </section>
-        
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p class="contact-intro">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your team. 
-                Feel free to reach out, and I'll get back to you as soon as possible!
-            </p>
-            <div class="contact-wrapper">
-                <!-- Left Side: Contact Form -->
-                <div class="contact-form">
-                    <h3>Let's Connect</h3>
-                    <p>
-                        Have a question or want to work together? Fill out the form below, and I'll respond promptly.
-                    </p>
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <!-- Right Column: Skills & Technologies -->
+            <div class="about-tools">
+                <h3>Technologies & Tools</h3>
+                <p>
+                    I leverage a combination of programming languages, frameworks, and developer tools to build high-performance applications and data solutions.
+                </p>
+                <div class="tools">
+                    <div class="tool">
+                        <img src="c-logo.png" alt="C Logo" />
+                        <span>C</span>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 85%"></div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <span class="experience-years">3+ years</span>
+                    </div>
+                    <div class="tool">
+                        <img src="java-logo.png" alt="Java Logo" />
+                        <span>Java</span>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 85%"></div>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                        <span class="experience-years">3+ years</span>
+                    </div>
+                    <div class="tool">
+                        <img src="python-logo.png" alt="Python Logo" />
+                        <span>Python</span>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 85%"></div>
                         </div>
-                        <button type="submit" class="button">Send Message</button>
-                    </form>
-                </div>
-    
-                <!-- Right Side: Contact Details -->
-                <div class="contact-details">
-                    <h3>Contact Information</h3>
-                    <ul>
-                        <li><strong>Email:</strong> <a href="mailto:lakhotiya.varad20@gmail.com">lakhotiya.varad20@gmail.com</a></li>
-                        <li><strong>Phone:</strong> <a href="tel:+911234567890">+91 12345 67890</a></li>
-                        <li><strong>Address:</strong> Aurangabad, Maharashtra, India</li>
-                    </ul>
-    
-                    <!-- Social Media Links with Icons -->
-                    <h3>Follow Me</h3>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/varadlakhotiya" target="_blank" class="social-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/varadlakhotiya" target="_blank" class="social-icon">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://twitter.com/varadlakhotiya" target="_blank" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+                        <span class="experience-years">3+ years</span>
+                    </div>
+                    <div class="tool">
+                        <img src="html-logo.png" alt="HTML Logo" />
+                        <span>HTML/CSS</span>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="experience-years">3+ years</span>
+                    </div>
+                    <div class="tool">
+                        <img src="js-logo.png" alt="JavaScript Logo" />
+                        <span>JavaScript</span>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="experience-years">3+ years</span>
+                    </div>
+                    <div class="tool">
+                        <img src="mysql-logo.png" alt="MySQL Logo" />
+                        <span>SQL</span>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="experience-years">3+ years</span>
+                    </div>
+                    <div class="tool">
+                        <img src="git-logo.png" alt="Git Logo" />
+                        <span>Git</span>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="experience-years">3+ years</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section id="services" class="section">
+    <div class="container">
+        <h2>Services</h2>
+        <h3>What I Provide</h3>
+        <div class="service-list">
+            <div class="service">
+                <i class="fas fa-laptop-code service-icon"></i>
+                <h3>Web Application Development</h3>
+                <p>
+                    Building full-stack web applications using frameworks like Flask, Node.js, and Django. I focus on responsive design, RESTful APIs, and database integration.
+                </p>
+            </div>
+            <div class="service">
+                <i class="fas fa-database service-icon"></i>
+                <h3>Data Analytics & Machine Learning</h3>
+                <p>
+                    Data cleaning, exploratory analysis, and predictive modeling using Python, Pandas, Scikit-learn, and visualization libraries to derive actionable insights.
+                </p>
+            </div>
+            <div class="service">
+                <i class="fas fa-cloud service-icon"></i>
+                <h3>Backend & API Development</h3>
+                <p>
+                    Designing and implementing secure, scalable server-side applications and APIs using Express.js, Flask, PHP, and MySQL for reliable data management.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="experience" class="section">
+    <div class="container">
+        <h2>Professional Experience</h2>
+        <div class="experience-timeline">
+            <!-- Deloitte Job Simulation -->
+            <div class="experience-item">
+                <div class="company-logo">
+                    <img src="deloitte-logo.png" alt="Deloitte Logo" />
+                </div>
+                <div class="experience-content">
+                    <h3>Data Analytics Job Simulation</h3>
+                    <h4>Deloitte Australia (Forage)</h4>
+                    <span class="date">June 2025</span>
+                    <div class="achievements">
+                        <h5>Key Achievements:</h5>
+                        <ul>
+                            <li>Completed a <strong>Deloitte job simulation</strong> involving data analysis and forensic technology</li>
+                            <li>Created an interactive <strong>data dashboard using Tableau</strong> for business insights</li>
+                            <li>Used <strong>Excel to classify data</strong> and draw meaningful business conclusions</li>
+                            <li>Applied forensic technology principles to real-world data scenarios</li>
+                        </ul>
+                    </div>
+                    <div class="tech-used">
+                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Forensic Technology</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Freelance work - Spice Symphony -->
+            <div class="experience-item">
+                <h3>Freelance Web Developer</h3>
+                <h4>Spice Symphony – Indian Restaurant Website</h4>
+                <span class="date">Jan 2023 - Present</span>
+                <div class="achievements">
+                    <h5>Project Overview:</h5>
+                    <ul>
+                        <li>Developed a <strong>full-stack web application</strong> for an Indian restaurant featuring a vegetarian shop and reservation system</li>
+                        <li>Built using <strong>Node.js, Express.js, and MySQL</strong> for robust backend functionality</li>
+                        <li>Implemented <strong>real-time table reservation system</strong> and online ordering features</li>
+                        <li>Managed complete project lifecycle from <strong>requirement gathering to deployment</strong></li>
+                    </ul>
+                </div>
+                <div class="tech-used">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express.js</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Full-Stack</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <div class="container">
+        <h2>My Projects</h2>
+        <div class="project-filters">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="web">Web Development</button>
+            <button data-filter="data">Data Science</button>
+        </div>
+        <h3>What I Built</h3>
+        <div class="projects-list">
+            <!-- Project 1: Spice Symphony -->
+            <div class="project-card" data-category="web">
+                <div class="card-inner">
+                    <!-- Front of the card -->
+                    <div class="card-front">
+                        <h3>Spice Symphony – Indian Restaurant Website</h3>
+                        <p>A full-stack web application for an Indian restaurant featuring a vegetarian shop and reservation system, built with <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MySQL</strong>.</p>
+                        <button class="button flip-btn">View Project</button>
+                    </div>
+                    <!-- Back of the card -->
+                    <div class="card-back">
+                        <h3>Project Details</h3>
+                        <div class="project-summary">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Real-time table reservation system</li>
+                                <li>Online ordering with payment integration</li>
+                                <li>Admin dashboard for order management</li>
+                                <li>Responsive design for all devices</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">HTML/CSS</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://spice-symphony-demo.com" class="link-btn primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/varadlakhotiya/spice-symphony" class="link-btn secondary" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                            <button class="link-btn tertiary flip-back-btn">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Airline Analytics -->
+            <div class="project-card" data-category="data">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Airline Passenger Satisfaction Analytics System</h3>
+                        <p>Engineered data pipelines and predictive models using <strong>Python</strong>, <strong>Pandas</strong>, and <strong>Scikit-learn</strong> to analyze passenger satisfaction and deliver insights via OLAP and clustering.</p>
+                        <button class="button flip-btn">View Project</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>Project Details</h3>
+                        <div class="project-summary">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Machine learning satisfaction prediction (92% accuracy)</li>
+                                <li>Interactive data visualization dashboard</li>
+                                <li>OLAP cubes for multi-dimensional analysis</li>
+                                <li>Customer segmentation using clustering</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">Matplotlib</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://airline-analytics-demo.com" class="link-btn primary" target="_blank">
+                                <i class="fas fa-chart-bar"></i> View Analysis
+                            </a>
+                            <a href="https://github.com/varadlakhotiya/airline-analytics" class="link-btn secondary" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                            <button class="link-btn tertiary flip-back-btn">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Nutrition Chatbot -->
+            <div class="project-card" data-category="web">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Food & Nutrition Conversational Chatbot</h3>
+                        <p>A responsive web app using <strong>HTML/CSS</strong>, <strong>JavaScript</strong>, and <strong>Flask</strong> that offers personalized nutrition recommendations through an NLP-powered chat interface.</p>
+                        <button class="button flip-btn">View Project</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>Project Details</h3>
+                        <div class="project-summary">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Natural language processing for food queries</li>
+                                <li>Personalized nutrition recommendations</li>
+                                <li>Calorie and nutrient tracking</li>
+                                <li>Recipe suggestions based on dietary preferences</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">CSS3</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://nutrition-chatbot-demo.com" class="link-btn primary" target="_blank">
+                                <i class="fas fa-comments"></i> Try Chatbot
+                            </a>
+                            <a href="https://github.com/varadlakhotiya/nutrition-chatbot" class="link-btn secondary" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                            <button class="link-btn tertiary flip-back-btn">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Temple Management -->
+            <div class="project-card" data-category="web">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Temple Management System</h3>
+                        <p>A web-based solution for temple activities and billing, developed with <strong>PHP</strong>, <strong>MySQL</strong>, and interactive front-end features.</p>
+                        <button class="button flip-btn">View Project</button>
+                    </div>
+                    <div class="card-back">
+                        <h3>Project Details</h3>
+                        <div class="project-summary">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Digital donation and billing system</li>
+                                <li>Event management and scheduling</li>
+                                <li>Member registration and tracking</li>
+                                <li>Financial reporting and analytics</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">jQuery</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://temple-management-demo.com" class="link-btn primary" target="_blank">
+                                <i class="fas fa-desktop"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/varadlakhotiya/temple-management" class="link-btn secondary" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                            <button class="link-btn tertiary flip-back-btn">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="section">
+    <div class="container">
+        <h2>What People Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p>"Varad delivered exceptional work on our web application..."</p>
+                <cite>- Professor Name, Manipal University</cite>
+            </div>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p>"Varad delivered exceptional work on our web application..."</p>
+                <cite>- Professor Name, Manipal University</cite>
+            </div>
+        </div>
+    </div>
+</section>
     
-    <footer>
-        <p>&copy; 2024 Varad Lakhotiya. All rights reserved.</p>
-    </footer>
+<section id="contact" class="section">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p class="contact-intro">
+            I'm always open to discussing new projects, creative ideas, or opportunities. Reach out, and I'll get back to you soon!
+        </p>
+        <div class="contact-wrapper">
+            <!-- Left Side: Contact Form -->
+            <div class="contact-form">
+                <h3>Let's Connect</h3>
+                <p>Have a question or want to work together? Fill out the form below, and I'll respond promptly.</p>
+                
+                <!-- Status Message -->
+                <div id="status-message" class="status-message">
+                    <i class="fas fa-check-circle"></i>
+                    <span id="status-text"></span>
+                </div>
+                
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <div class="error-message">Please enter your name</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <div class="error-message">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                        <div class="error-message">Please enter your message</div>
+                    </div>
+                    <button type="submit" id="submit-btn">
+                        <span id="button-text">Send Message</span>
+                        <i id="button-icon" class="fas fa-paper-plane"></i>
+                        <div class="spinner" id="spinner"></div>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Side: Contact Details -->
+            <div class="contact-details">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:lakhotiya.varad20@gmail.com">lakhotiya.varad20@gmail.com</a></li>
+                    <li><strong>Phone:</strong> <a href="tel:+918852952034">+91 88529 52034</a></li>
+                    <li><strong>Address:</strong> Aurangabad, Maharashtra, India</li>
+                </ul>
+
+                <h3>Follow Me</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/varad-lakhotiya-038350245/" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/varadlakhotiya" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://instagram.com/varadlakhotiya" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Varad Lakhotiya. All rights reserved.</p>
+</footer>
+
 </body>
 
 </html>

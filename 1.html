@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Varad Lakhotiya's portfolio showcasing skills, projects, achievements, and contact information.">
+    <meta name="keywords" content="Varad Lakhotiya, portfolio, web development, projects, resume, contact, achievements, blog">
+    <meta name="author" content="Varad Lakhotiya">
+    <title>Varad Lakhotiya - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="new-header">
+        <header>
+            <nav>
+                <div class="logo">Varad Lakhotiya</div>
+
+                <div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li>
+                        <button id="theme-toggle">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon" style="display: none;"></i>
+                        </button>
+                    </li>
+                </ul> 
+                </div>
+            </nav>
+        </header>
+    </div>
+    
+    <section id="home" class="section hero" style="background-image: url('background-img.png');">
+        <div class="container">
+            <div class="content">
+                <h1>Hi, I'm Varad Lakhotiya</h1>
+                <h2 id="typing-text">Full-Stack Developer & Problem-Solver</h2> <!-- This element will be animated -->
+                <p>I specialize in crafting modern, responsive web applications. Currently, I am focused on building innovative solutions and enhancing user experiences through cutting-edge technologies.</p>
+                <a href="resume.pdf" class="button" download>Download Resume</a>
+            </div>
+            <div class="image">
+                <img data-src="right.svg" alt="Varad Lakhotiya" />
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <!-- Left Column: Text Content -->
+                <div class="about-text">
+                    <h3>My Journey</h3>
+                    <p>
+                        Over the past 2 years, I’ve honed my skills as a self-taught developer, working on a variety of projects ranging from web applications to mobile apps. 
+                        My journey began with a curiosity for coding, and it has since evolved into a passion for building solutions that solve real-world problems.
+                    </p>
+                    <p>
+                        I have a strong foundation in both frontend and backend development, with expertise in building scalable systems and high-performance applications. 
+                        Currently, I’m expanding my knowledge in cloud technologies and DevOps to deliver even more robust solutions.
+                    </p>
+                    <h3>What Drives Me</h3>
+                    <p>
+                        I believe in the power of technology to create meaningful change. Whether it’s designing intuitive user interfaces or optimizing backend systems, 
+                        I strive to deliver solutions that are both functional and impactful.
+                    </p>
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>Certified Web Developer - [Certification Body]</li>
+                        <li>Advanced JavaScript - [Platform]</li>
+                        <li>Cloud Computing Fundamentals - [Platform]</li>
+                    </ul>
+                    <a href="#contact" class="button">Let's Work Together</a>
+                </div>
+    
+                <!-- Right Column: Tools and Technologies -->
+                <div class="about-tools">
+                    <h3>Technologies and Tools</h3>
+                    <p>
+                        I leverage a combination of cutting-edge technologies and reliable open-source software to build user-focused, high-performance applications. 
+                        Below are some of the tools and technologies I work with:
+                    </p>
+                    <div class="tools">
+                        <div class="tool animate-on-scroll">
+                            <img src="c-logo.png" alt="C Language Logo" />
+                            <span>C Language</span>
+                        </div>
+                        <div class="tool">
+                            <img src="java-logo.png" alt="Java Logo" />
+                            <span>Java</span>
+                        </div>
+                        <div class="tool">
+                            <img src="html-logo.png" alt="HTML Logo" />
+                            <span>HTML</span>
+                        </div>
+                        <div class="tool">
+                            <img src="css-logo.jpeg" alt="CSS Logo" />
+                            <span>CSS</span>
+                        </div>
+                        <div class="tool">
+                            <img src="js-logo.png" alt="JavaScript Logo" />
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tool">
+                            <img src="mysql-logo.png" alt="MySQL Logo" />
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tool">
+                            <img src="git-logo.png" alt="Git Logo" />
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Services</h2>
+            <h3>What I Provide</h3>
+            <div class="service-list">
+                <div class="service">
+                    <i class="fas fa-laptop-code service-icon"></i> <!-- FontAwesome icon -->
+                    <h3>Web Application Development</h3>
+                    <p>
+                        Web design encompasses many different skills and disciplines in the production and maintenance of websites. 
+                        This includes web graphic design, user interface design, authoring (standardized code and proprietary software), 
+                        user experience design, and search engine optimization.
+                    </p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-mobile-alt service-icon"></i> <!-- FontAwesome icon -->
+                    <h3>Mobile Application Development</h3>
+                    <p>
+                        I provide a range of mobile application development services, including custom mobile development for Android platforms, 
+                        building cross-platform apps, designing user experiences, and integrating novel mobile interfaces such as chat and voice.
+                    </p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-server service-icon"></i> <!-- FontAwesome icon -->
+                    <h3>Backend Development</h3>
+                    <p>
+                        Backend development focuses on creating the server-side logic, database management, and APIs that power web and mobile applications. 
+                        This involves optimizing the logic of displaying elements in interactive designs to enhance user experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-filters">
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="web">Web Development</button>
+                <button data-filter="mobile">Mobile Apps</button>
+            </div>
+            <h3>What I Built</h3>
+            <div class="projects-list">
+                <div class="project" data-category="web">
+                    <h3>Temple Management System</h3>
+                    <p>A web-based platform for managing temple activities, donations, and events. Built using <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.</p>
+                    <a href="#" class="button">View Project</a>
+                </div>
+                <div class="project" data-category="mobile">
+                    <h3>Mutual Funds Recommendation Chatbot</h3>
+                    <p>An AI-powered chatbot that recommends mutual funds based on user preferences. Developed using <strong>Flutter</strong> and integrated with <strong>Dialogflow</strong>.</p>
+                    <a href="#" class="button">View Project</a>
+                </div>
+                <div class="project" data-category="web">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A responsive portfolio website showcasing my skills, projects, and achievements. Built with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.</p>
+                    <a href="#" class="button">View Project</a>
+                </div>
+                <div class="project" data-category="mobile">
+                    <h3>Fitness Tracker App</h3>
+                    <p>A mobile app to track workouts, calories, and progress. Developed using <strong>React Native</strong> and <strong>Firebase</strong>.</p>
+                    <a href="#" class="button">View Project</a>
+                </div>
+                <div class="project" data-category="web">
+                    <h3>E-Commerce Platform</h3>
+                    <p>An online store with user authentication, product search, and payment integration. Built with <strong>Django</strong> and <strong>PostgreSQL</strong>.</p>
+                    <a href="#" class="button">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p class="contact-intro">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your team. 
+                Feel free to reach out, and I'll get back to you as soon as possible!
+            </p>
+            <div class="contact-wrapper">
+                <!-- Left Side: Contact Form -->
+                <div class="contact-form">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        Have a question or want to work together? Fill out the form below, and I'll respond promptly.
+                    </p>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="button">Send Message</button>
+                    </form>
+                </div>
+    
+                <!-- Right Side: Contact Details -->
+                <div class="contact-details">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li><strong>Email:</strong> <a href="mailto:lakhotiya.varad20@gmail.com">lakhotiya.varad20@gmail.com</a></li>
+                        <li><strong>Phone:</strong> <a href="tel:+911234567890">+91 12345 67890</a></li>
+                        <li><strong>Address:</strong> Aurangabad, Maharashtra, India</li>
+                    </ul>
+    
+                    <!-- Social Media Links with Icons -->
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/varadlakhotiya" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/varadlakhotiya" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/varadlakhotiya" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Varad Lakhotiya. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
